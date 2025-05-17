@@ -109,7 +109,7 @@ nav ul {
 }
 
 nav ul li {
-  color: #000000;
+  color: rgb(23, 25, 27);
   font-weight: 700;
   letter-spacing: 2.5px;
   font-size: 22px;
@@ -197,7 +197,7 @@ nav ul li.logo-space {
   bottom: 40px;
   transform: translateX(-50%);
   background: rgba(254, 241, 233, 1);
-  color: #222;
+  color: rgb(23, 25, 27);
   font-family: 'Rammetto one', Arial, sans-serif;
   font-size: 20px; /* Medium font size */
   font-weight: 700;
@@ -213,7 +213,7 @@ nav ul li.logo-space {
   animation-delay: 0.8s;;
 }
 .see-my-work-btn:hover {
-  background: #222;
+  background: rgb(23, 25, 27);
   color: rgba(254, 241, 233, 1);
 }
 
