@@ -28,6 +28,45 @@ html, body {
   pointer-events: none;
 }
 
+.center-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 11;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.main-title {
+  font-size: 6rem;
+  font-family: 'Rammetto One', 'Montserrat', Arial, sans-serif;
+  color: #fff;
+  margin: 0 0 18px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: 0.6s;
+}
+
+.main-subtitle {
+  font-size: 1.7rem;
+  color: #fef1e9;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: 0.6s;
+}
+
 header {
   width: 100vw;
   position: absolute;
@@ -103,6 +142,13 @@ nav ul li:nth-child(5) { animation-delay: 0.8s; }
   }
 }
 
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 nav ul li.logo-space {
   width: 420px;
   display: flex;
@@ -164,6 +210,7 @@ nav ul li.logo-space {
   opacity: 0;
   animation: popUpBtn 1s 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   transition: background 0.2s, color 0.2s;
+  animation-delay: 0.8s;;
 }
 .see-my-work-btn:hover {
   background: #222;

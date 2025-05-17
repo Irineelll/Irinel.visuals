@@ -231,7 +231,7 @@ nav ul li.logo-space {
 }
 
 .gallery-item:hover img {
-  filter: brightness(0.15);
+  filter: brightness(0.30);
   transform: scale(1.04);
 }
 
