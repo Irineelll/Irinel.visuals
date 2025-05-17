@@ -4,7 +4,6 @@ html, body {
   padding: 0;
   font-family: 'Montserrat', Arial, sans-serif;
   box-sizing: border-box;
-  background: #fff;
 }
 
 .hero-bg {
@@ -12,8 +11,21 @@ html, body {
   top: 0; left: 0; right: 0; bottom: 0;
   width: 100vw;
   height: 100vh;
+  background: url('Photos/bg.jpg') no-repeat center center;
   background-size: cover;
   z-index: -1;
+}
+
+/* Add a dark overlay above the background image */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45); /* Adjust opacity as needed */
+  z-index: 1;
+  pointer-events: none;
 }
 
 header {
@@ -23,16 +35,34 @@ header {
   left: 0;
   z-index: 2;
 }
+.logo-img {
+  height: 150px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-grey-box {
+  background: rgba(254, 241, 233, 1);
+  width: 100vw;
+  min-height: 180px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
 
 nav {
   width: 100vw;
-  margin-top: 80px;
+  /* Increase margin-top for more space from the top */
+  margin-top: 10px;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 60px;
   list-style: none;
   padding: 0;
@@ -40,7 +70,7 @@ nav ul {
 }
 
 nav ul li {
-  color: #222 !important;
+  color: #000000;
   font-weight: 700;
   letter-spacing: 2.5px;
   font-size: 22px;
@@ -53,6 +83,7 @@ nav ul li {
 
 nav ul li,
 .subtitle {
+  /* Add animation */
   opacity: 0;
   transform: translateY(-40px);
   animation: fadeDown 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
@@ -77,20 +108,24 @@ nav ul li.logo-space {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  pointer-events: none;
-  cursor: default;
+  justify-content: flex-start; /* Align to top */
   background: none;
   margin: 0 30px;
   padding: 0;
 }
 
+.logo-space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo-blank {
-  display: none;
+  display: none; /* Remove blank space so subtitle aligns with nav items */
 }
 
 .subtitle {
-  color: #000000;
+  color: #fff;
   font-size: 38px;
   letter-spacing: 1.5px;
   font-weight: 900;
@@ -108,18 +143,67 @@ nav ul li.logo-space {
   line-height: 1.2;
 }
 
-/* Header grey box styling */
-.header-grey-box {
-  background: rgba(220, 220, 220, 0.92);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  border-radius: 0;
-  padding: 48px 0 40px 0; /* Increased top and bottom padding */
-  margin-bottom: 0;
-  width: 100vw;
-  position: relative;
-  z-index: 10;
+.see-my-work-btn {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #222;
+  font-family: 'Rammetto one', Arial, sans-serif;
+  font-size: 20px; /* Medium font size */
+  font-weight: 700;
+  letter-spacing: 2px; /* Medium letter spacing */
+  padding: 16px 40px; /* Medium padding */
+  border-radius: 32px; /* Medium border radius */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  text-decoration: none;
+  z-index: 100;
+  opacity: 0;
+  animation: popUpBtn 1s 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  transition: background 0.2s, color 0.2s;
+}
+.see-my-work-btn:hover {
+  background: #222;
+  color: #fff;
 }
 
+@keyframes popUpBtn {
+  from {
+    opacity: 0;
+    bottom: 40px; /* Start lower */
+  }
+  to {
+    opacity: 1;
+    bottom: 90px; /* Move up to final position */
+  }
+}
+
+@media (max-width: 1100px) {
+  nav ul {
+    gap: 30px;
+  }
+  nav ul li.logo-space {
+    width: 220px;
+  }
+  .logo-blank {
+    height: 40px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    gap: 18px;
+  }
+  nav ul li.logo-space {
+    width: 100vw;
+    margin: 0;
+  }
+}
 /* Pinterest-style gallery */
 .gallery {
   column-count: 4;
@@ -173,7 +257,7 @@ nav ul li.logo-space {
 
 .gallery-title {
     text-align: center;
-    margin: 360px 0 56px 0; /* Increased top margin to move it further down */
+    margin: 260px 0 56px 0; /* Increased top margin to move it further down */
     font-family: 'Playwrite DK Loopet', 'Montserrat', Arial, sans-serif;
     font-size: 3rem;
     color: #222;

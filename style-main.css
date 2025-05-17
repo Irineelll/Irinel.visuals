@@ -35,17 +35,34 @@ header {
   left: 0;
   z-index: 2;
 }
+.logo-img {
+  height: 150px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-grey-box {
+  background: rgba(254, 241, 233, 1);
+  width: 100vw;
+  min-height: 180px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
 
 nav {
   width: 100vw;
   /* Increase margin-top for more space from the top */
-  margin-top: 80px;
+  margin-top: 10px;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 60px;
   list-style: none;
   padding: 0;
@@ -53,7 +70,7 @@ nav ul {
 }
 
 nav ul li {
-  color: #fff;
+  color: #000000;
   font-weight: 700;
   letter-spacing: 2.5px;
   font-size: 22px;
@@ -99,6 +116,12 @@ nav ul li.logo-space {
   padding: 0;
 }
 
+.logo-space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo-blank {
   display: none; /* Remove blank space so subtitle aligns with nav items */
 }
@@ -122,13 +145,12 @@ nav ul li.logo-space {
   line-height: 1.2;
 }
 
-/* ...existing code... */
 .see-my-work-btn {
   position: fixed;
   left: 50%;
   bottom: 40px;
   transform: translateX(-50%);
-  background: #fff;
+  background: rgba(254, 241, 233, 1);
   color: #222;
   font-family: 'Rammetto one', Arial, sans-serif;
   font-size: 20px; /* Medium font size */
@@ -145,7 +167,7 @@ nav ul li.logo-space {
 }
 .see-my-work-btn:hover {
   background: #222;
-  color: #fff;
+  color: rgba(254, 241, 233, 1);
 }
 
 @keyframes popUpBtn {
