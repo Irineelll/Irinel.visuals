@@ -269,3 +269,63 @@ social-icon:hover {
 .site-footer .footer-link:hover {
   color: #ffb47e;
 }
+
+/* ================= MOBILE STYLES ================= */
+@media (max-width: 500px) {
+  html, body {
+    font-size: 15px;
+    overflow-x: hidden;
+  }
+  .logo-img {
+    height: 70px;
+    max-width: 90vw;
+  }
+  .header-grey-box {
+    min-height: 90px;
+    padding: 0 4px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 8px 0;
+  }
+  nav ul li {
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+  }
+  nav ul li.logo-space {
+    width: 100%;
+    margin: 0;
+  }
+  .contact-title {
+    font-size: 1.3rem;
+    margin: 0 0 24px 0;
+    padding: 0 8px;
+  }
+  .contact-card {
+    padding: 18px 6px;
+    max-width: 98vw;
+    border-radius: 10px;
+  }
+  .contact-card h2 {
+    font-size: 1.1rem;
+  }
+  .contact-link {
+    font-size: 0.98rem;
+  }
+  .contact-socials {
+    font-size: 1rem;
+  }
+  .social-icon {
+    font-size: 1.3rem;
+    margin: 0 6px;
+  }
+  .site-footer {
+    font-size: 0.95rem;
+    padding: 18px 0 12px 0;
+    margin-top: 18px;
+  }
+  .site-footer .footer-link {
+    margin: 0 4px;
+  }
+}

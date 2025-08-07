@@ -418,3 +418,105 @@ nav ul li.logo-space {
 .site-footer .footer-link:hover {
   color: #ffb47e;
 }
+
+/* ================= MOBILE STYLES ================= */
+@media (max-width: 500px) {
+  html, body {
+    font-size: 15px;
+    overflow-x: hidden;
+  }
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+  }
+  .main-title {
+    font-size: 2.2rem;
+    padding: 0 8px;
+    line-height: 1.1;
+  }
+  .main-subtitle {
+    font-size: 1.1rem;
+    padding: 0 8px;
+  }
+  .see-my-work-btn {
+    font-size: 1rem;
+    padding: 12px 18px;
+    border-radius: 22px;
+    bottom: 60px;
+  }
+  .scroll-down-text {
+    font-size: 0.95rem;
+    bottom: 10px;
+    padding: 0 8px;
+  }
+  .logo-img {
+    height: 70px;
+    max-width: 90vw;
+  }
+  .header-grey-box {
+    min-height: 90px;
+    padding: 0 4px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 8px 0;
+  }
+  nav ul li {
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+  }
+  nav ul li.logo-space {
+    width: 100%;
+    margin: 0;
+  }
+  .about-section {
+    padding: 18px 0 0 0;
+  }
+  .about-section h2 {
+    font-size: 1.3rem;
+    padding: 18px 0 36px 0;
+    margin-bottom: 12px;
+  }
+  .about-intro {
+    font-size: 0.98rem;
+    margin-bottom: 18px;
+    padding: 0 8px;
+  }
+  .about-container {
+    padding: 0 0;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 44vw);
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+  }
+  .about-img-ferrari,
+  .about-text-top-right,
+  .about-img-bmw,
+  .about-text-bottom-left,
+  .about-img-porsche,
+  .about-img-audi {
+    grid-column: 1 / 2 !important;
+    grid-row: auto !important;
+    min-height: 0;
+    padding: 0 8px;
+  }
+  .about-text-top-right,
+  .about-text-bottom-left {
+    font-size: 0.98rem;
+    padding: 12px 8px;
+  }
+  .about-img img {
+    border-radius: 8px;
+  }
+  .site-footer {
+    font-size: 0.95rem;
+    padding: 18px 0 12px 0;
+  }
+  .site-footer .footer-link {
+    margin: 0 4px;
+  }
+}

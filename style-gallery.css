@@ -329,3 +329,66 @@ nav ul li.logo-space {
 .site-footer .footer-link:hover {
   color: #ffb47e;
 }
+
+/* ================= MOBILE STYLES ================= */
+@media (max-width: 500px) {
+  html, body {
+    font-size: 15px;
+    overflow-x: hidden;
+  }
+  .logo-img {
+    height: 70px;
+    max-width: 90vw;
+  }
+  .header-grey-box {
+    min-height: 90px;
+    padding: 0 4px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 8px 0;
+  }
+  nav ul li {
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+  }
+  nav ul li.logo-space {
+    width: 100%;
+    margin: 0;
+  }
+  .gallery-title {
+    font-size: 1.3rem;
+    margin: 30px 0 30px 0;
+    padding: 0 8px;
+  }
+  .gallery {
+    column-count: 2;
+    column-gap: 12px;
+    padding: 10px 4px 10px 4px;
+    max-width: 100vw;
+  }
+  .gallery-item {
+    margin-bottom: 18px;
+    border-radius: 10px;
+  }
+  .gallery-item img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+  }
+  .gallery-item::after {
+    font-size: 1.1rem;
+    padding: 0 4px;
+  }
+  .site-footer {
+    font-size: 0.95rem;
+    padding: 18px 0 12px 0;
+    margin-top: 18px;
+  }
+  .site-footer .footer-link {
+    margin: 0 4px;
+  }
+}
